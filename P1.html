@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        label{
+            color:red;
+        }
+        label:hover{
+            color:green;
+        }
+    </style> -->
+</head>
+<body>
+    <button onclick="call()">Click Me</button>
+    <label id="lbl1" onmouseover="changemycolor(this, 'red')">I am Label</label>
+    <label id="lbl2" onmouseover="changemycolor(this, 'blue')">Second Label</label>
+    <input type="text" onkeypress="mykeypressed()" />
+    <select id="myselect" onchange="changedme(this)">
+        <option value="FY">FY</option>
+        <option value="SY">SY</option>
+        <option value="TY">TY</option>
+    </select>
+    <select id="myselect2" onchange="changedme(this)">
+        <option value="FY">FY</option>
+        <option value="SY">SY</option>
+        <option value="TY">TY</option>
+    </select>
+
+
+    <select id="year"></select>
+    <select id="subject"></select>
+
+
+    <script>
+       let a = 20;//Number
+       let b = "Abhijit"; //String
+       let c = 20.3;//Double / Float
+       let d = true; // Boolean
+       let e = new Date();//Date
+       let x = 'x';//String
+
+       console.log(typeof(c));
+
+       function call()
+       {
+           alert("Hello");
+       }
+
+       function calldbl()
+       {
+           alert("DBL");
+       }
+
+       function changemycolor(ctrl, color)
+       {
+           ctrl.style.color = color;
+       }
+
+       function mykeypressed()
+       {
+           alert(String.fromCharCode(event.which));
+       }
+
+       function changedme(ctrl)
+       {
+            alert("Changed to " + ctrl.value);
+       }
+
+
+       let years = [
+                        {id: 1, name:"First Year"}, 
+                        {id: 2, name:"Second Year"}, 
+                        {id: 3, name:"Third Year"}
+                    ];
+
+    </script>
+</body>
+</html>
